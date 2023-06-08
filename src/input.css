@@ -1,3 +1,218 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.container{
+    @apply max-w-[120rem] p-[1rem] mx-auto;
+}
+
+@layer components{
+
+    .branding .container{
+        @apply flex justify-center bg-light;
+    }
+    .branding img{
+        @apply w-[11.5rem]
+    }
+
+    .header-nav{
+        @apply flex items-center justify-between;
+    }
+
+    .header-nav p{
+        @apply text-[1.1rem] font-bold text-light;
+    }
+
+    /* <!-- HEADER DROP DOWN MENU --> */
+    .header-dropdown{
+        @apply bg-primary;
+    }
+
+    .dropdown-nav{
+        @apply bg-light w-full max-h-0 overflow-hidden transition-[.8s] ease-in;
+    }
+    .dropdown-nav.open{
+        @apply max-h-fit transition-[.8s] ease-in;
+    }
+
+    .dropdown-nav-parent{
+        @apply border-solid border-b border-grey;
+    }
+
+    .dropdown-nav-parent:hover h3{
+        @apply bg-grey text-primary;
+    }
+
+    .dropdown-nav-parent h3{
+        @apply pl-[1rem] flex justify-between items-center uppercase font-bold cursor-pointer text-[.8rem];
+    }
+
+    .dropdown-nav-parent h3 i{
+        @apply text-dark bg-grey p-[1rem];
+    }
+
+	.dropdown-nav-parent h3 i.open{
+		@apply transition-[.5s] ease-in;
+	}
+
+	.dropdown-nav-child{
+		@apply max-h-0 overflow-hidden transition-[.5s] ease-in;
+	}
+
+	.dropdown-nav-child a{
+		@apply pl-[2.5rem];
+	}
+
+	.dropdown-nav-child.open{
+		@apply max-h-fit transition-[.5s] ease-in;
+	}
+
+    /* <!-- ITEM-CHILD 2--> */
+
+    .dropdown-nav-child-2{
+        @apply border-solid border-t border-grey;
+    }
+
+    .dropdown-nav-child-2:hover{
+        @apply bg-grey;
+    }
+
+    .dropdown-nav-child-2 a{
+        @apply text-[.85rem] flex justify-between items-center cursor-pointer;
+    }
+
+    .dropdown-nav-child-2 a i{
+        @apply  text-dark bg-grey p-[1rem]
+    }
+
+	.dropdown-nav-child-2.open{
+		@apply transition-[.5s] ease-in;
+	}
+
+	.dropdown-nav-child-3{
+		@apply max-h-0 overflow-hidden transition-[.5s] ease-in;
+	}
+
+    .dropdown-nav-child-3 li a{
+		@apply pl-[4.5rem];
+	}
+
+	.dropdown-nav-child-3.open{
+		@apply max-h-fit transition-[.5s] ease-in;
+	}
+
+    /* <!-- ITEM-CHILD 4--> */
+    .dropdown-nav-child-4{
+        @apply border-solid border-t border-grey;
+    }
+
+    .dropdown-nav-child-4 a{
+        @apply  flex justify-between items-center uppercase font-bold cursor-pointer;
+    }
+
+	.dropdown-nav-child-4.open{
+		@apply transition-[.5s] ease-in;
+	}
+
+	.dropdown-nav-child-5{
+		@apply pr-0 max-h-0 overflow-hidden transition-[.5s] ease-in;
+	}
+
+    .dropdown-nav-child-5 li{
+        @apply pl-[2.5rem]
+    }
+
+	.dropdown-nav-child-5.open{
+		@apply max-h-fit transition-[.5s] ease-in;
+	}
+
+    .child-padding{
+        @apply bg-light text-[.85rem] py-[1rem] border-solid border-t border-grey;
+    }
+
+    .child-padding:hover{
+        @apply bg-grey text-primary cursor-pointer;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .toggle__menu {
+		@apply z-[3] rounded-full;
+	}
+
+	.toggle__menu span {
+		@apply w-[1.5rem] h-[.15rem] bg-light block transition ease-in-out duration-[.5s];
+	}
+
+	.toggle__menu span:nth-child(2){
+		@apply my-[.3rem];
+	}
+
+	.toggle__menu.open span:first-child {
+		@apply translate-x-0 translate-y-[5px] rotate-[225deg] transition ease-in-out duration-[.5s];
+	}
+
+	.toggle__menu.open span:nth-child(2) {
+		@apply opacity-0 transition ease-in-out duration-[.5s];
+	}
+
+	.toggle__menu.open span:last-child {
+		@apply translate-x-0 translate-y-[-9px] rotate-[-225deg] ease-in-out duration-[.5s];
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
