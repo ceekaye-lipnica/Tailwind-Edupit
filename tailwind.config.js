@@ -12,8 +12,8 @@ module.exports = {
         asul: '#18406B',
       },
 
-      backgroundColor: {
-        
+      backgroundImage: {
+        'banner1': 'url("./img/slider-bg.jpg")',
 
       },
     },

@@ -556,6 +556,12 @@ video {
   }
 }
 
+/* MOBILE VIEW  */
+
+.header2 {
+  display: none;
+}
+
 .branding .container {
   display: flex;
   justify-content: center;
@@ -853,9 +859,179 @@ video {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* DESKTOP VIEW */
+
+@media (min-width:1080px){
+  .header1 {
+    display: none;
+  }
+
+  .header2 {
+    display: block;
+  }
+
+  .header-fixed {
+    --tw-bg-opacity: 1;
+    background-color: rgb(14 181 130 / var(--tw-bg-opacity));
+  }
+
+  .header-float-container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 70rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .header-float .header-float-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10rem;
+    border-radius: 5px;
+    --tw-bg-opacity: 1;
+    background-color: rgb(24 64 107 / var(--tw-bg-opacity));
+  }
+
+  .header-fixed__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header-fixed-left-contacts {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+  }
+
+  .header-fixed-left {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
+
+  .header-fixed-right {
+    display: flex;
+    align-items: center;
+    gap: 10rem;
+  }
+
+  .header-fixed-right-socials ul {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
+
+  .header-fixed-right-login ul {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
+
+  .header-fixed-right-login ul li i {
+    padding-right: .5rem;
+  }
+
+  .header-float-nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .header-float-nav-content {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .header-float-nav-parent {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    font-weight: 500;
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
+
+  .header-float-nav-parent h3 i {
+    font-size: .7rem;
+    --tw-text-opacity: 1;
+    color: rgb(156 163 175 / var(--tw-text-opacity));
+  }
+
+  /* <!-- HEADER DESKTOP DROP DOWN MENU --> */
+
+  .header-float-nav-parent:hover .header-float-nav-child {
+    display: block;
+    --tw-translate-y: 1rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    transition-property: .5s;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+  }
+
+  .header-float-nav-child {
+    position: absolute;
+    display: none;
+    --tw-translate-y: 4rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    --tw-bg-opacity: 1;
+    background-color: rgb(14 181 130 / var(--tw-bg-opacity));
+    padding: 1rem;
+    transition-property: .5s;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+  }
+}
+
+/* SLIDER BANNER */
+
+.slider-items-1 {
+  min-height: 46rem;
+  background-image: url("./img/slider-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.slider-item-img {
+  display: none;
+}
+
+.slider-items-text h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.btn {
+  padding-top: .7rem;
+  padding-bottom: .7rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.btn.green {
+  border-radius: 5px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(14 181 130 / var(--tw-bg-opacity));
+  font-size: 1.1rem;
+  font-weight: 500;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
 .container {
   margin-left: auto;
   margin-right: auto;
-  max-width: 120rem;
+  max-width: 90rem;
   padding: 1rem;
 }
