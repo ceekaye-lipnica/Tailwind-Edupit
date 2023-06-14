@@ -2,6 +2,9 @@
 module.exports = {
   content: ["./dist/**/*.{html,js}"],
   theme: {
+      fontFamily: {
+        'Raleway' :['Raleway', 'sans-serif']
+      },
       textFillColor: theme => theme('borderColor'),
       textStrokeColor: theme => theme('borderColor'),
       textStrokeWidth: theme => theme('borderWidth'),

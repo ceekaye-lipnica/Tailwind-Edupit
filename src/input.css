@@ -21,7 +21,7 @@
     }
 
     .btn.green:hover{
-        @apply bg-dark;
+        @apply bg-dark text-light;
     }
 
     .btn.greenLine{
@@ -771,13 +771,11 @@
         .news-item{
             @apply w-[20rem];
         }
-    
     }
 
     .testimonial{
         @apply relative py-[2rem];
     }
-
     .testimonial-text{
         @apply mt-[2rem];
     }
@@ -830,15 +828,118 @@
         }
     }
 
+    /* ONLINE PAGE SECTION */
+    .onlinepage{
+        @apply pt-[2rem] pb-[2rem];
+    }
+
+    .onlinepage__wrapper{
+        @apply mt-[1.5rem];
+    }
+    
+    .onlinepage-title h3{
+        @apply text-center text-primary font-bold text-[1.5rem];
+    }
+
+    .onlinepage-title h4{
+        @apply text-dark font-bold text-[1.6rem] text-center w-[23rem] mx-auto leading-[1.2];
+    }
+
+    .onlinepage-item{
+        @apply border-primary border-solid border-[2px] border-opacity-50 p-[2rem] transition-[.5s] ease-in shadow-2xl;
+    }
+
+    .onlinepage-item:hover{
+        @apply border-opacity-0 transition-[.5s] ease-in;
+    }
+
+    .onlinepage-item:last-child{
+        @apply mt-[3rem];
+    }
+
+    .onlinepage-text{
+        @apply mt-[1rem];
+    }
+
+    .onlinepage-text h4{
+        @apply text-primary font-bold text-[1rem] mb-[.8rem];
+    }
+
+    .onlinepage-text a{
+        @apply text-dark font-bold text-[1.7rem] leading-[1] transition-[.5s] ease-in;
+    }
+    .onlinepage-text a:hover{
+        @apply text-primary transition-[.5s] ease-in;
+    }
+    .onlinepage-btn{
+        @apply mt-[3rem];
+    }
+
+    @media (min-width:1080px){
+        .onlinepage-title h3{
+            @apply text-[1rem];
+        }
+        .onlinepage-title h4{
+            @apply text-[3rem] w-[40rem];
+        }
+        .onlinepage__wrapper{
+            @apply flex items-center gap-[1.8rem] mt-[2rem];
+        }
+        .onlinepage-item:last-child{
+            @apply mt-0;
+        }
+        .onlinepage-item{
+            @apply flex items-center gap-[2rem];
+        }
+    
+
+    }
+
+
+
+
+
+
+
+
 
     /* FOOTER */
 
     .footer{
-        @apply bg-asul pt-[2rem] pb-[1rem];
+        @apply  bg-asul mt-[20rem] pb-[1rem];
+    }
+    .footer__wrapper{
+        @apply mt-[8rem];
     }
 
+    .footer-email{
+        @apply mt-[-18rem] bg-primary py-[4rem] px-[1.5rem] rounded-[5px] 
+    }
+    .footer-email-text h3{
+        @apply text-light text-[1.9rem] font-bold;
+    }
+    .footer-email-text p{
+        @apply text-light text-[1rem] font-medium mt-[.3rem];
+    }
+    .footer-email-form{
+        @apply mt-[2rem];
+    }
+    .footer-email-form form input{
+        @apply py-[1rem] px-[2rem] text-gray-400 text-[1.1rem] font-medium outline-none rounded-[5px] w-full;
+    }
+    .footer-email-form a{
+        @apply bg-dark w-full flex justify-center py-[1rem] mt-[1rem] transition-[.5s] ease-in;
+    }
+    .footer-email-form a:hover{
+        @apply bg-asul transition-[.5s] ease-in;
+    }
+    .footer-email-form a i{
+        @apply text-light text-[1.5rem];
+    }
+
+
     .footer-top{
-        @apply flex flex-col gap-[1.5rem] text-center text-light;;
+        @apply flex flex-col gap-[1.5rem] text-center text-light;
     }
 
     .footer-img{
@@ -914,6 +1015,24 @@
     }
 
     @media (min-width:1080px){
+        .footer{
+            @apply  mt-[10rem] pb-[1rem];
+        }
+        .footer-email{
+            @apply flex justify-between items-center mt-[-6rem] py-[2.5rem] px-[2.5rem];
+        }
+        .footer-email-form{
+            @apply flex;
+        }
+        .footer-email-form a{
+            @apply mt-0 transition-[.5s] ease-in;
+        }
+        .footer-email-text h3{
+            @apply text-[2.5rem];
+        }
+        .footer-email-text p{
+            @apply text-[1.2rem] font-medium mt-[.3rem];
+        }
         .footer-top{
             @apply flex flex-row gap-[2.5rem] text-left pb-[3rem];
         }
@@ -986,7 +1105,6 @@
 }
 
 /* SLIDER BUTTON */
-
 
 .slider__banner .tns-controls button {
 	@apply bg-primary text-light py-[.5rem] px-[.8rem] rounded-full;

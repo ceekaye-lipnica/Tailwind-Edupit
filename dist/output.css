@@ -2041,13 +2041,215 @@ video {
   }
 }
 
+/* ONLINE PAGE SECTION */
+
+.onlinepage {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.onlinepage__wrapper {
+  margin-top: 1.5rem;
+}
+
+.onlinepage-title h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(14 181 130 / var(--tw-text-opacity));
+}
+
+.onlinepage-title h4 {
+  margin-left: auto;
+  margin-right: auto;
+  width: 23rem;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.2;
+  --tw-text-opacity: 1;
+  color: rgb(42 55 76 / var(--tw-text-opacity));
+}
+
+.onlinepage-item {
+  border-width: 2px;
+  border-style: solid;
+  border-color: rgb(14 181 130 / var(--tw-border-opacity));
+  --tw-border-opacity: 0.5;
+  padding: 2rem;
+  --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  transition-property: .5s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}
+
+.onlinepage-item:hover {
+  --tw-border-opacity: 0;
+  transition-property: .5s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}
+
+.onlinepage-item:last-child {
+  margin-top: 3rem;
+}
+
+.onlinepage-text {
+  margin-top: 1rem;
+}
+
+.onlinepage-text h4 {
+  margin-bottom: .8rem;
+  font-size: 1rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(14 181 130 / var(--tw-text-opacity));
+}
+
+.onlinepage-text a {
+  font-size: 1.7rem;
+  font-weight: 700;
+  line-height: 1;
+  --tw-text-opacity: 1;
+  color: rgb(42 55 76 / var(--tw-text-opacity));
+  transition-property: .5s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}
+
+.onlinepage-text a:hover {
+  --tw-text-opacity: 1;
+  color: rgb(14 181 130 / var(--tw-text-opacity));
+  transition-property: .5s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}
+
+.onlinepage-btn {
+  margin-top: 3rem;
+}
+
+@media (min-width:1080px){
+  .onlinepage-title h3 {
+    font-size: 1rem;
+  }
+
+  .onlinepage-title h4 {
+    width: 40rem;
+    font-size: 3rem;
+  }
+
+  .onlinepage__wrapper {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1.8rem;
+  }
+
+  .onlinepage-item:last-child {
+    margin-top: 0px;
+  }
+
+  .onlinepage-item {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+
 /* FOOTER */
 
 .footer {
+  margin-top: 20rem;
   --tw-bg-opacity: 1;
   background-color: rgb(24 64 107 / var(--tw-bg-opacity));
-  padding-top: 2rem;
   padding-bottom: 1rem;
+}
+
+.footer__wrapper {
+  margin-top: 8rem;
+}
+
+.footer-email {
+  margin-top: -18rem;
+  border-radius: 5px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(14 181 130 / var(--tw-bg-opacity));
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.footer-email-text h3 {
+  font-size: 1.9rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.footer-email-text p {
+  margin-top: .3rem;
+  font-size: 1rem;
+  font-weight: 500;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.footer-email-form {
+  margin-top: 2rem;
+}
+
+.footer-email-form form input {
+  width: 100%;
+  border-radius: 5px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity));
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.footer-email-form a {
+  margin-top: 1rem;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  --tw-bg-opacity: 1;
+  background-color: rgb(42 55 76 / var(--tw-bg-opacity));
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  transition-property: .5s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}
+
+.footer-email-form a:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(24 64 107 / var(--tw-bg-opacity));
+  transition-property: .5s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}
+
+.footer-email-form a i {
+  font-size: 1.5rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .footer-top {
@@ -2201,6 +2403,44 @@ video {
 }
 
 @media (min-width:1080px){
+  .footer {
+    margin-top: 10rem;
+    padding-bottom: 1rem;
+  }
+
+  .footer-email {
+    margin-top: -6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
+  .footer-email-form {
+    display: flex;
+  }
+
+  .footer-email-form a {
+    margin-top: 0px;
+    transition-property: .5s;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+  }
+
+  .footer-email-text h3 {
+    font-size: 2.5rem;
+  }
+
+  .footer-email-text p {
+    margin-top: .3rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+
   .footer-top {
     display: flex;
     flex-direction: row;
@@ -2255,6 +2495,10 @@ video {
   }
 }
 
+.font-Raleway {
+  font-family: Raleway, sans-serif;
+}
+
 .btn {
   padding-top: .7rem;
   padding-bottom: .7rem;
@@ -2275,6 +2519,8 @@ video {
 .btn.green:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(42 55 76 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .btn.greenLine {
