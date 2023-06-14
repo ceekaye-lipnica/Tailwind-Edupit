@@ -11,6 +11,17 @@
     -webkit-text-stroke-width: 3px;
 }
 
+body{
+    @apply h-[1200px]
+}
+
+.btn--solid{
+    @apply inline-block text-light text-[1.2rem] bg-primary px-[1.5rem] py-[.5rem] rounded-md font-semibold transition-all border-[1px] border-transparent hover:bg-dark hover:transition-all
+}
+.btn--outline{
+    @apply inline-block text-primary text-[1.2rem] bg-transparent px-[1.5rem] py-[.5rem] rounded-md font-semibold transition-all border-[1px] border-primary hover:bg-primary hover:transition-all hover:text-light
+}
+
 @layer utilities{
     .btn{
         @apply py-[.7rem] px-[1.5rem];
@@ -35,7 +46,7 @@
 
 @layer components{
 
-    /* MOBILE VIEW  */
+    /* MOBILE VIEW 
     .header2{
         @apply hidden;
     }
@@ -55,7 +66,7 @@
         @apply text-[1.1rem] font-bold text-light;
     }
 
-    /* <!-- HEADER DROP DOWN MENU --> */
+    <!-- HEADER DROP DOWN MENU -->
     .header-dropdown{
         @apply bg-primary;
     }
@@ -99,7 +110,7 @@
 		@apply max-h-fit transition-[.5s] ease-in;
 	}
 
-    /* <!-- ITEM-CHILD 2--> */
+    <!-- ITEM-CHILD 2-->
 
     .dropdown-nav-child-2{
         @apply border-solid border-t border-grey;
@@ -133,7 +144,7 @@
 		@apply max-h-fit transition-[.5s] ease-in;
 	}
 
-    /* <!-- ITEM-CHILD 4--> */
+    <!-- ITEM-CHILD 4-->
     .dropdown-nav-child-4{
         @apply border-solid border-t border-grey;
     }
@@ -191,7 +202,7 @@
 	}
 
 
-    /* DESKTOP VIEW */
+    DESKTOP VIEW
 
     @media (min-width:1080px){
         .header1{
@@ -258,7 +269,7 @@
             @apply text-[.7rem] text-gray-400;
         }
 
-        /* <!-- HEADER DESKTOP DROP DOWN MENU --> */
+        <!-- HEADER DESKTOP DROP DOWN MENU -->
         .header-float-nav-parent:hover .header-float-nav-child{
             @apply translate-y-[1rem] block transition-[.5s] ease-in ;
         }
@@ -266,6 +277,94 @@
         .header-float-nav-child{
             @apply hidden bg-primary absolute translate-y-[4rem] p-[1rem] transition-[.5s] ease-in;
         }
+    } */
+
+    /*HEADER*/
+    .header{
+        @apply lg:mt-[5rem] lg:fixed lg:w-full lg:bg-transparent;
+    }
+    .header .header__wrapper{
+        @apply lg:flex lg:items-center lg:justify-between lg:bg-asul lg:max-w-[75rem] lg:mx-auto lg:rounded-md
+    }
+    .header .branding{
+        @apply bg-light p-[1.5rem] lg:bg-transparent;
+    }
+    .header .branding img{
+        @apply mx-auto
+    }
+    .header__nav__title{
+        @apply bg-primary p-[1rem] flex justify-between items-center lg:bg-transparent lg:hidden
+    }
+    .header__nav__title h2{
+        @apply text-light font-bold text-[1.3rem]
+    }
+    .header__nav__title .toggle__menu span{
+        @apply w-[1.5rem] h-[.2rem] bg-light block transition-all
+    }
+    .header__nav__title .toggle__menu.open span:first-child{
+        @apply transform translate-y-[6px] rotate-[225deg] transition-all
+    }
+    .header__nav__title .toggle__menu.open span:nth-child(2){
+        @apply opacity-0 transition-all
+    }
+    .header__nav__title .toggle__menu.open span:last-child{
+        @apply transform translate-y-[-6px] rotate-[-225deg] transition-all
+    }
+    .header__nav__title .toggle__menu span:nth-child(2){
+        @apply my-[.2rem]
+    }
+    .header__nav nav{
+        @apply max-h-0 overflow-hidden transition-all lg:max-h-[200rem] lg:flex lg:items-center lg:p-[1.5rem];
+    }
+    .header__nav nav.open{
+        @apply max-h-[200rem] transition-all
+    }
+    .header__nav nav li{
+        @apply list-none
+    }
+    .header__nav .drop__nav h4{
+        @apply flex items-center justify-between border-b-[1px] border-gray-400 px-[1.5rem] py-[.8rem] lg:border-none
+        lg:gap-[.5rem]
+    }
+    .header__nav .drop__nav h4 p{
+        @apply font-bold text-[1rem] lg:text-light lg:font-normal
+    }
+    .header__nav .drop__nav .drop__toggle span{
+        @apply w-[.8rem] h-[.2rem] bg-dark block transition-all lg:bg-light lg:h-[.1rem] lg:w-[.5rem];
+    }
+    .header__nav .drop__nav .drop__toggle span:first-child{
+        @apply lg:transform lg:rotate-[-45deg] lg:translate-x-[5px] lg:translate-y-[.15rem];
+    }
+    .header__nav .drop__nav .drop__toggle span:last-child{
+        @apply transform rotate-[270deg] translate-y-[-.15rem] lg:rotate-[45deg] lg:translate-y-0;
+    }
+
+    .header__nav .drop__nav .drop__toggle.open span:last-child{
+        @apply transform rotate-[0deg] transition-all
+    }
+    .header__nav .drop__content{
+        @apply max-h-0 overflow-hidden transition-all lg:max-h-[20rem] lg:absolute lg:bottom-[-25rem] lg:bg-primary lg:min-w-[10rem] lg:opacity-0 lg:py-[1rem];
+    }
+    .header__nav .drop__content.open{
+        @apply max-h-[200rem] transition-all;
+    }
+    .header__nav .drop__content ul li:not(first-child){
+        @apply border-b-[1px] border-gray-400 lg:border-none;
+    }
+    .header__nav .drop__content ul li{
+        @apply py-[1rem] lg:p-[1rem]
+    }
+    .header__nav .drop__content ul li a{
+        @apply px-[3rem] text-[.8rem] lg:px-0 lg:text-light lg:text-[1.2rem]
+    }
+    .header__nav .drop__content ul li:hover{
+        @apply lg:bg-light
+    }
+    .header__nav .drop__content ul li:hover a{
+        @apply lg:text-primary
+    }
+    .header__nav nav a.free{
+        @apply hidden lg:block 
     }
 
 
