@@ -27,26 +27,30 @@ body{
         @apply py-[.7rem] px-[1.5rem];
     }
 
-    .btn.green{
-        @apply bg-primary text-light text-[1.1rem] font-medium rounded-[5px];
+    .green{
+        @apply z-[1] bg-primary text-light text-[1.1rem] font-medium rounded-[5px];
     }
 
-    .btn.green:hover{
+    .green:hover{
         @apply bg-dark text-light;
     }
 
-    .btn.greenLine{
+    .greenLine{
         @apply bg-transparent text-primary font-medium border-solid border-[1px] border-primary transition-[.5s] ease-in rounded-[5px];
     }
 
-    .btn.greenLine:hover{
+    .greenLine:hover{
         @apply bg-primary text-light border-solid border-[1px] border-primary transition-[.5s] ease-in rounded-[5px];
+    }
+
+    .shallow-white{
+        @apply text-[1rem] bg-transparent border-[1px] border-grey rounded-[.3rem] text-dark hover:text-light hover:bg-primary hover:border-primary transition ease-in-out duration-300
     }
 }
 
 @layer components{
 
-    /* MOBILE VIEW 
+    /* THIS IS MINE */
     .header2{
         @apply hidden;
     }
@@ -66,7 +70,6 @@ body{
         @apply text-[1.1rem] font-bold text-light;
     }
 
-    <!-- HEADER DROP DOWN MENU -->
     .header-dropdown{
         @apply bg-primary;
     }
@@ -110,8 +113,6 @@ body{
 		@apply max-h-fit transition-[.5s] ease-in;
 	}
 
-    <!-- ITEM-CHILD 2-->
-
     .dropdown-nav-child-2{
         @apply border-solid border-t border-grey;
     }
@@ -144,7 +145,6 @@ body{
 		@apply max-h-fit transition-[.5s] ease-in;
 	}
 
-    <!-- ITEM-CHILD 4-->
     .dropdown-nav-child-4{
         @apply border-solid border-t border-grey;
     }
@@ -202,8 +202,6 @@ body{
 	}
 
 
-    DESKTOP VIEW
-
     @media (min-width:1080px){
         .header1{
             @apply hidden;
@@ -215,6 +213,10 @@ body{
 
         .header-fixed{
             @apply bg-primary;
+        }
+
+        .header-float{
+            @apply z-[999] fixed top-[5rem] left-[25%];
         }
 
         .header-float-container{
@@ -269,7 +271,6 @@ body{
             @apply text-[.7rem] text-gray-400;
         }
 
-        <!-- HEADER DESKTOP DROP DOWN MENU -->
         .header-float-nav-parent:hover .header-float-nav-child{
             @apply translate-y-[1rem] block transition-[.5s] ease-in ;
         }
@@ -277,11 +278,12 @@ body{
         .header-float-nav-child{
             @apply hidden bg-primary absolute translate-y-[4rem] p-[1rem] transition-[.5s] ease-in;
         }
-    } */
+    }
 
-    /*HEADER*/
+    /* SIR ABET'S */
+    /* HEADER
     .header{
-        @apply lg:mt-[5rem] lg:fixed lg:w-full lg:bg-transparent;
+        @apply  z-[999] lg:mt-[5rem] lg:fixed lg:w-full lg:bg-transparent;
     }
     .header .header__wrapper{
         @apply lg:flex lg:items-center lg:justify-between lg:bg-asul lg:max-w-[75rem] lg:mx-auto lg:rounded-md
@@ -365,10 +367,13 @@ body{
     }
     .header__nav nav a.free{
         @apply hidden lg:block 
-    }
+    } */
 
 
     /* SLIDER BANNER */
+    /* .slider__banner{
+        @apply z-[1];
+    }
     .slider__banner .container{
         @apply max-w-[90rem];
     }
@@ -438,7 +443,54 @@ body{
             @apply flex;
         }
     
+    } */
+
+    /** ---------- BANNER ---------- */
+
+    .banner .container{
+        @apply max-w-[100rem];
     }
+    
+    .banner__item{
+        @apply pt-[8rem] bg-banner1 bg-no-repeat bg-cover min-h-[80vh] lg:min-h-[100vh] lg:pt-[12rem]
+    }
+
+    .banner__content{
+        @apply lg:flex lg:flex-row lg:items-center lg:justify-between
+    }
+
+    .banner__img{
+        @apply hidden lg:block
+    }
+    
+    .banner__img img{
+        @apply w-[30rem]
+    }
+
+    .banner__text{
+        @apply relative
+    }
+
+    .banner__text h2{
+        @apply text-light text-[2rem] font-[600] text-center px-[2rem] lg:text-[4rem] lg:text-left lg:px-0 lg:w-[50rem]
+    }
+
+    .banner__text p{
+        @apply text-light font-medium text-[1.5rem] px-[1rem] text-center mt-[1rem] lg:px-0 lg:text-[1.5rem] lg:text-left lg:w-[45rem]
+    }
+
+    .banner__text p span{
+        @apply block lg:flex
+    }
+
+    .banner__btn{
+        @apply flex justify-center items-center gap-x-[.5rem] mt-[3rem] text-light lg:justify-start
+    }
+
+    .banner__bg-text{
+        @apply absolute bg-clip-text text-transparent text-[3.5rem] left-0 top-[-2rem] opacity-[.07] lg:text-[5rem]
+    }
+
 
      /* FEATURE SLIDER */
 
@@ -446,8 +498,12 @@ body{
         @apply pt-[1.5rem] relative;
     }
 
+    .feature__wrapper{
+        @apply flex items-center gap-[1.5rem];
+    }
+
     .feature-item {
-        @apply flex justify-center border-solid border-[1px] border-primary w-[20rem] h-fit py-[1.5rem] rounded-[5px];
+        @apply flex bg-light justify-center border-solid border-[1px] border-primary w-[20rem] h-fit py-[1.5rem] rounded-[5px];
     }
 
     .feature-img{
@@ -466,10 +522,31 @@ body{
         .feature .container{
             @apply max-w-[60rem]
         }
+
+        .feature-item{
+            @apply flex justify-center w-[50rem];
+        }
+    
         
     }
 
     /* ------------------ABOUT-------------------- */
+    #roll-up {
+		@apply fixed bg-primary outline-none border-none rounded-[5px] py-[.5rem] px-[.8rem] right-[2rem] bottom-[6rem] z-[5] transition-[.5s] ease-in;
+	}
+
+	#roll-up:hover {
+		@apply bg-dark transition-[.5s] ease-in;
+	}
+
+	#roll-up i {
+		@apply text-light;
+	}
+
+	html {
+		scroll-behavior: smooth
+	}
+
     .about__wrapper{
         @apply flex flex-col;
     }
@@ -519,6 +596,10 @@ body{
     }
 
     @media (min-width:1080px){
+        #roll-up {
+            @apply right-[7rem] bottom-[2rem];
+        }
+        
         .about{
             @apply py-[3rem];
         }
@@ -565,6 +646,10 @@ body{
 
     .philosophy-item{
         @apply relative w-[25rem] shadow-xl;
+    }
+
+    .philosophy-item:last-child .philosophy-author{
+        @apply mt-[2rem];
     }
 
     .philosophy-level p{
@@ -706,6 +791,14 @@ body{
         .instructor-item:hover .instructor-content span{
             @apply px-[10rem]  bg-primary transition-[.8s] ease-in;
         }
+        .instructors-title h4{
+            @apply text-primary text-[1rem] font-bold;
+        }
+        .instructors-title h2{
+            @apply text-dark text-[2.8rem] font-bold w-[25rem];
+        }
+
+
     }
 
 
@@ -775,7 +868,7 @@ body{
 
 
     /* NEWS SECTION */
-    .news{
+    /* .news{
         @apply relative;
     }
 
@@ -870,7 +963,96 @@ body{
         .news-item{
             @apply w-[20rem];
         }
+    } */
+
+    .news{
+        @apply relative pb-[5rem]
     }
+
+    .news__title{
+        @apply font-[700] text-[1.6rem] text-primary pb-[2rem] lg:text-[1rem];
+    }
+
+    .news__title h4{
+        @apply text-dark font-bold w-[25rem] lg:text-[2.5rem] lg:w-[40rem];
+    }
+
+    .news__wrapper{
+        @apply lg:flex lg:gap-x-[2rem]
+    }
+
+    .news__card{
+        @apply overflow-hidden bg-light shadow-[0px_5px_4px_0px_rgba(0,0,0,.05)] mb-[1rem] px-[.5rem] min-h-[10rem] lg:px-0
+    }
+
+    .news__card:hover .news__subtitle{
+        @apply transition ease-in duration-300 
+    }
+
+    .news__card:hover .news__subtitle span{
+        @apply top-0 left-0 w-full h-full transition-all duration-500
+    }
+
+    .news__card:hover .news__subtitle p{
+        @apply left-[2%] p-[.5rem] text-[1.1rem] transition-all duration-500
+    }
+
+    .news__card:hover .news__img img{
+        @apply scale-[1.1] transition ease-in-out duration-500
+    }
+
+    .news__img{
+        @apply relative
+    }
+
+    .news__subtitle{
+        @apply transition ease-in duration-300
+    }
+
+    .news__subtitle span{
+        @apply absolute top-[50%] left-[50%] bg-black bg-opacity-50 w-0 h-0 transition-all duration-500
+    }
+
+    .news__subtitle p{
+        @apply absolute top-[2%] left-[10%] bg-primary text-light rounded-[.2rem] font-[600] m-[1rem] text-[0] transition-all duration-500
+    }
+
+    .news__img{
+        @apply overflow-hidden 
+    }
+
+    .news__img img{
+        @apply w-full lg:w-full transition ease-in-out duration-500
+    }
+
+    .news__content{
+        @apply px-[1rem] py-[2rem]
+    }
+
+    .news__content a{
+        @apply text-[1.3rem] text-dark font-[600] hover:text-primary transition ease-in-out duration-300 lg:w-[10rem] 
+    }
+
+    .news__content ul{
+        @apply flex items-center mt-[1rem] mb-[2rem]
+    }
+
+    .news__content ul li{
+        @apply text-[1.1rem] font-[500] mr-[1rem] text-primary
+    }
+
+    .news__content ul li i{
+        @apply mr-[.5rem]
+    }
+
+    .news__content ul li a{
+        @apply text-[1.1rem] text-primary font-[500]
+    }
+
+    .news__content .shallow-white{
+        @apply text-[1.1rem] font-[500] hover:text-light w-fit lg:pr-[1.5rem]
+    }
+
 
     .testimonial{
         @apply relative py-[2rem];
@@ -945,7 +1127,7 @@ body{
     }
 
     .onlinepage-item{
-        @apply border-primary border-solid border-[2px] border-opacity-50 p-[2rem] transition-[.5s] ease-in shadow-2xl;
+        @apply  border-primary border-solid border-[2px] border-opacity-50 p-[2rem] transition-[.5s] ease-in shadow-2xl;
     }
 
     .onlinepage-item:hover{
@@ -957,7 +1139,7 @@ body{
     }
 
     .onlinepage-text{
-        @apply mt-[1rem];
+        @apply relative mt-[1rem];
     }
 
     .onlinepage-text h4{
@@ -970,8 +1152,27 @@ body{
     .onlinepage-text a:hover{
         @apply text-primary transition-[.5s] ease-in;
     }
+
+    .onlinepage-item:hover .btn.green{
+        @apply opacity-100 transition-[.5s] ease-in;
+    }
+    .onlinepage-item:hover  .onlinepage-btn .plus{
+        @apply opacity-0 transition-[.5s] ease-in;
+    }
+
     .onlinepage-btn{
         @apply mt-[3rem];
+    }
+
+    .btn.green{
+        @apply opacity-0 transition-[.5s] ease-in;
+    }
+
+    .onlinepage-btn .plus{
+        @apply absolute left-0 bottom-0 px-[.7rem] pb-[.45rem] pt-[.3rem] bg-primary rounded-full transition-[.5s] ease-in;
+    }
+    .onlinepage-btn .plus i{
+        @apply text-[1.2rem]
     }
 
     @media (min-width:1080px){
@@ -993,13 +1194,6 @@ body{
     
 
     }
-
-
-
-
-
-
-
 
 
     /* FOOTER */
@@ -1124,7 +1318,10 @@ body{
             @apply flex;
         }
         .footer-email-form a{
-            @apply mt-0 transition-[.5s] ease-in;
+            @apply mt-0 transition-[.5s] ease-in py-[1rem] px-[5rem];
+        }
+        .footer-email-form form input{
+            @apply w-[20rem] rounded-none rounded-tl-[5px] rounded-bl-[5px];
         }
         .footer-email-text h3{
             @apply text-[2.5rem];
@@ -1133,7 +1330,7 @@ body{
             @apply text-[1.2rem] font-medium mt-[.3rem];
         }
         .footer-top{
-            @apply flex flex-row gap-[2.5rem] text-left pb-[3rem];
+            @apply flex flex-row gap-[8rem] text-left pb-[3rem];
         }
 
         .footer-img{
@@ -1166,52 +1363,26 @@ body{
     }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
 
 /* SLIDER BUTTON */
 
-.slider__banner .tns-controls button {
+/* .slider__banner .tns-controls button {
 	@apply bg-primary text-light py-[.5rem] px-[.8rem] rounded-full;
 }
 
 .slider__banner .tns-controls {
-	@apply absolute top-[50%] right-0 left-0 mx-[2rem] flex items-center justify-between max-w-[120rem] z-10;
+	@apply absolute top-[40%] right-0 left-0 mx-[2rem] flex items-center justify-between max-w-[120rem] z-10;
+} */
+
+.banner .tns-controls{
+    @apply absolute top-[50%] left-0 right-0 max-w-[120rem] z-[10] mx-auto flex justify-between
 }
+
+.banner .tns-controls button{
+    @apply bg-primary p-[.8rem] rounded-full text-[1.5rem] flex items-center text-light
+}
+
 .instructors .tns-controls button {
 	@apply bg-primary text-light py-[.5rem] px-[.8rem] rounded-full;
 }
@@ -1219,16 +1390,17 @@ body{
 .instructors .tns-controls {
 	@apply absolute top-[18%] right-[29rem] left-[80rem] mx-[2rem] flex items-center justify-between max-w-[120rem] z-10;
 }
-.news .tns-controls button {
+
+.news .tns-controls button{
 	@apply bg-primary text-light py-[.5rem] px-[.8rem] rounded-full;
 }
 
-.news .tns-controls {
-	@apply absolute top-[18%] right-[29rem] left-[80rem] mx-[2rem] flex items-center justify-between max-w-[120rem] z-10;
+.news .tns-controls{
+	@apply absolute top-[12%] right-[27rem] left-[82rem] mx-[2rem] flex items-center justify-between max-w-[120rem] z-10;
 }
 
 .feature .tns-outer {
-	@apply mx-[3rem];
+	@apply mx-[3rem] translate-y-[-6rem];
 }
 
 .testimonial .tns-outer {
@@ -1240,7 +1412,7 @@ body{
 }
 
 .feature .tns-controls {
-	@apply absolute top-[50%] right-0 left-0 mx-auto flex items-center justify-between max-w-[55rem] z-10;
+	@apply absolute top-[50%] right-0 left-0 mx-auto flex items-center justify-between max-w-[70rem] z-10;
 }
 .testimonial .tns-controls button {
 	@apply bg-primary text-light py-[.5rem] px-[.8rem] rounded-full;

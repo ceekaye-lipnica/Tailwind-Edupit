@@ -1,5 +1,6 @@
 const toggleMenu = document.querySelector(".toggle__menu");
 const mobileNav = document.querySelector(".dropdown-nav");
+// const mobileNav = document.querySelector(".header__nav nav");
 const header = document.querySelector(".header");
 const body = document.querySelector("body");
 toggleMenu.addEventListener("click", () => {
@@ -10,6 +11,7 @@ toggleMenu.addEventListener("click", () => {
 
 // HEADER MOBILE 
 const links = document.querySelectorAll(".dropdown-nav-parent h3");
+// const links = document.querySelectorAll(".drop__nav h4");
 links.forEach((drop) => {
 	drop.addEventListener("click", () => {
 		drop.nextElementSibling.classList.toggle("open");
@@ -57,3 +59,23 @@ floatChild3.forEach((float3) => {
 		float3.querySelector("i").classList.toggle("open");
 	});
 });
+
+// SCROLL TO TOP
+let mybutton = document.getElementById("roll-up");
+
+window.onscroll = function () {
+	scrollFunction();
+};
+
+function scrollFunction() {
+	if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 600) {
+		mybutton.style.display = "block";
+	} else {
+		mybutton.style.display = "none";
+	}
+}
+
+function topFunction() {
+	document.body.scrollTop = 0;
+	document.documentElement.scrollTop = 0;
+}
