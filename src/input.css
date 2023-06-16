@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .container{
-    @apply max-w-[70rem] p-[1rem] mx-auto;
+    @apply relative max-w-[70rem] p-[1rem] mx-auto;
 }
 
 .bg-clip-text {
@@ -561,10 +561,13 @@
     }
 
 
-
     /* BENEFITS SECTION */
     .benefits{
         @apply py-[2rem];
+    }
+
+    .benefits .container{
+        @apply relative;
     }
 
     .benefits__wrapper{
@@ -629,6 +632,10 @@
     /* NEWS SECTION */
     .news{
         @apply relative pb-[5rem]
+    }
+
+    .news .container{
+        @apply relative;
     }
 
     .news__title{
@@ -719,6 +726,9 @@
     /* TESTIMONIAL SECTION */
     .testimonial{
         @apply relative py-[2rem];
+    }
+    .testimonial .container{
+        @apply relative;
     }
     .testimonial-text{
         @apply mt-[2rem];
@@ -1091,7 +1101,7 @@
 }
 
 .instructors .tns-controls {
-	@apply absolute top-[18%] right-[29rem] left-[80rem] mx-[2rem] flex items-center justify-between max-w-[120rem] z-10;
+	@apply absolute top-[18%] right-0 left-[60rem] mx-[2rem] flex items-center justify-between max-w-[120rem] z-10;
 }
 
 .news .tns-controls button{
@@ -1099,7 +1109,7 @@
 }
 
 .news .tns-controls{
-	@apply absolute top-[12%] right-[27rem] left-[82rem] mx-[2rem] flex items-center justify-between max-w-[120rem] z-10;
+	@apply absolute top-[12%] right-0 left-[60rem] mx-[2rem] flex items-center justify-between max-w-[120rem] z-10;
 }
 
 .feature .tns-outer {
@@ -1122,12 +1132,16 @@
     @apply opacity-100 transition-all;
 }
 
+/* .testimonial .tns-outer{
+    @apply relative;
+} */
+
 .testimonial .tns-controls button {
 	@apply bg-primary text-light py-[.5rem] px-[.8rem] rounded-full;
 }
 
 .testimonial .tns-controls {
-	@apply absolute bottom-[2rem] left-[62rem] right-[51rem] mx-auto flex items-center justify-between max-w-[55rem] z-10;
+	@apply absolute bottom-0 left-[35rem] right-[29rem] mx-auto flex items-center justify-between max-w-[55rem] z-10;
 }
 
 .about .tns-slider{

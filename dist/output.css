@@ -1995,6 +1995,10 @@ html {
   padding-bottom: 2rem;
 }
 
+.benefits .container {
+  position: relative;
+}
+
 .benefits__wrapper {
   margin-top: 3rem;
   display: flex;
@@ -2112,6 +2116,10 @@ html {
 .news {
   position: relative;
   padding-bottom: 5rem;
+}
+
+.news .container {
+  position: relative;
 }
 
 .news__title {
@@ -2349,6 +2357,10 @@ html {
   position: relative;
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+
+.testimonial .container {
+  position: relative;
 }
 
 .testimonial-text {
@@ -3166,6 +3178,7 @@ html {
 }
 
 .container {
+  position: relative;
   margin-left: auto;
   margin-right: auto;
   max-width: 70rem;
@@ -3227,8 +3240,8 @@ html {
 .instructors .tns-controls {
   position: absolute;
   top: 18%;
-  right: 29rem;
-  left: 80rem;
+  right: 0px;
+  left: 60rem;
   z-index: 10;
   margin-left: 2rem;
   margin-right: 2rem;
@@ -3253,8 +3266,8 @@ html {
 .news .tns-controls {
   position: absolute;
   top: 12%;
-  right: 27rem;
-  left: 82rem;
+  right: 0px;
+  left: 60rem;
   z-index: 10;
   margin-left: 2rem;
   margin-right: 2rem;
@@ -3313,6 +3326,10 @@ html {
   transition-duration: 150ms;
 }
 
+/* .testimonial .tns-outer{
+    @apply relative;
+} */
+
 .testimonial .tns-controls button {
   border-radius: 9999px;
   --tw-bg-opacity: 1;
@@ -3327,9 +3344,9 @@ html {
 
 .testimonial .tns-controls {
   position: absolute;
-  bottom: 2rem;
-  left: 62rem;
-  right: 51rem;
+  bottom: 0px;
+  left: 35rem;
+  right: 29rem;
   z-index: 10;
   margin-left: auto;
   margin-right: auto;
