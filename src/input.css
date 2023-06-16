@@ -393,7 +393,18 @@
     }
 
     .philosophy-item{
-        @apply relative w-[25rem] shadow-xl;
+        @apply relative w-[25rem] shadow-xl transition-all duration-500;
+    }
+
+    .philosophy-item:hover{
+        @apply translate-y-[-.5rem] transition-all duration-500;
+    }
+
+    .philosophy-item:hover .philosophy-level p{
+        @apply translate-y-[.8rem] transition-all duration-500;
+    }
+    .philosophy-item:hover .philosophy-level i{
+        @apply translate-y-[.8rem] transition-all duration-500;
     }
 
     .philosophy-item:last-child .philosophy-author{
@@ -401,11 +412,11 @@
     }
 
     .philosophy-level p{
-        @apply absolute  bg-primary rounded-[5px] w-fit p-[.3rem] text-light font-medium top-[.5rem] left-[.5rem];
+        @apply absolute  bg-primary rounded-[5px] w-fit p-[.3rem] text-light font-medium top-[.5rem] left-[.5rem] transition-all duration-500;
     }
 
     .philosophy-level i{
-        @apply absolute text-primary text-[1.2rem] bg-light rounded-[5px] py-[.5rem] px-[.4rem] top-[.5rem] right-[.5rem];
+        @apply absolute text-primary text-[1.2rem] bg-light rounded-[5px] py-[.5rem] px-[.4rem] top-[.5rem] right-[.5rem] transition-all duration-500;
     }
 
     .philosophy-text{
