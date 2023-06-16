@@ -1169,6 +1169,10 @@ video {
 
 /** ---------- BANNER ---------- */
 
+.banner {
+  position: relative;
+}
+
 .banner .container {
   max-width: 80rem;
 }
@@ -2632,8 +2636,9 @@ html {
   width: 7rem;
   border-radius: 0.375rem;
   padding: 0.25rem;
-  padding-top: .7rem;
+  padding-top: .6rem;
   text-align: center;
+  font-size: .9rem;
   font-weight: 700;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -2647,13 +2652,10 @@ html {
   .onlinepage-btn a {
     height: 2.5rem;
     width: 9rem;
+    padding-top: .7rem;
     font-size: 1.1rem;
   }
 }
-
-/* .onlinepage-btn a:hover{
-        @apply bg-asul text-light;
-    }  */
 
 .onlinepage-btn a::after {
   position: absolute;

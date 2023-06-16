@@ -187,6 +187,9 @@
 
     /** ---------- BANNER ---------- */
 
+    .banner{
+        @apply relative;
+    }
     .banner .container{
         @apply max-w-[80rem];
     }
@@ -861,11 +864,9 @@
         @apply content-[""] block absolute w-1 h-[.8rem] bg-white left-[45%] top-[30%];
     } 
     .onlinepage-btn a{
-        @apply absolute inline-block w-[7rem] text-center lg:w-[9rem] h-[2rem] lg:h-[2.5rem] lg:text-[1.1rem] pt-[.7rem] opacity-0 left-0 top-0 text-white font-bold p-1 rounded-md transition-all duration-500;
+        @apply absolute inline-block w-[7rem] text-center text-[.9rem] pt-[.6rem]  lg:w-[9rem] h-[2rem] lg:h-[2.5rem] lg:text-[1.1rem] lg:pt-[.7rem] opacity-0 left-0 top-0 text-white font-bold p-1 rounded-md transition-all duration-500;
     } 
-    /* .onlinepage-btn a:hover{
-        @apply bg-asul text-light;
-    }  */
+
     .onlinepage-btn a::after{
         @apply content-[""] block absolute top-0 left-0 rounded-md bg-primary w-0 h-full z-[-1] transition-all duration-500;
     }
